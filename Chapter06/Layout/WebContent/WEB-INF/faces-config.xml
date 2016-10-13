@@ -1,0 +1,24 @@
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>products</from-outcome>
+            <to-view-id>/products.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>home</from-outcome>
+            <to-view-id>/home.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/products.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>hotDeals</from-outcome>
+            <to-view-id>/hotdeals.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

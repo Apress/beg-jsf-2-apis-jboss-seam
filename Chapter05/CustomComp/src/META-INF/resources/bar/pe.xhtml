@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:composite="http://java.sun.com/jsf/composite">
+<body>
+<composite:interface name="pe" displayName="Product Editor">
+    <composite:attribute name="product" type="custom.Product" required="true"/>
+</composite:interface>
+<composite:implementation>
+    <h:form>
+        <h:inputHidden value="#{compositeComponent.attrs['product'].id}"/>
+        <h:inputText value="#{compositeComponent.attrs['product'].name}"/>
+        <h:commandButton
+            action="#{compositeComponent.attrs['product'].onUpdated}" value="OK"/>
+    </h:form>
+</composite:implementation>
+</body>
+</html>

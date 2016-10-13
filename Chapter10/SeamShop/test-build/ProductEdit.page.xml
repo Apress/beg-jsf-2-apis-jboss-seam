@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://jboss.com/products/seam/pages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jboss.com/products/seam/pages http://jboss.com/products/seam/pages-2.1.xsd"
+    no-conversation-view-id="/ProductList.xhtml" login-required="true">
+    <restrict>#{s:hasRole("admin")}</restrict>
+    <begin-conversation join="true" flush-mode="MANUAL" />
+    <action execute="#{productHome.wire}" />
+    <param name="productFrom" />
+    <param name="productId" value="#{productHome.productId}" />
+    <navigation from-action="#{productHome.persist}">
+        <rule>
+            <end-conversation />
+            <redirect view-id="/Product.xhtml" />
+        </rule>
+    </navigation>
+    <navigation from-action="#{productHome.update}">
+        <rule>
+            <end-conversation />
+            <redirect view-id="/Product.xhtml" />
+        </rule>
+    </navigation>
+    <navigation from-action="#{productHome.remove}">
+        <rule>
+            <end-conversation />
+            <redirect view-id="/ProductList.xhtml" />
+        </rule>
+    </navigation>
+</page>

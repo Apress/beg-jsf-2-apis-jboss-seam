@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-6-sun-1.6.0.07"/>
+	<classpathentry kind="lib" path="/home/kent/jboss-5.0.1.GA/server/default/deployers/webbeans.deployer/jsr299-api.jar" sourcepath="/home/kent/webbeans-1.0.0.BETA1/lib/webbeans/webbeans-core-sources.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

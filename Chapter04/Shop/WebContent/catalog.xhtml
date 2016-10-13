@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<h:dataTable value="#{catalog.products}" var="p" border="1">
+    <h:column>
+        <f:facet name="header">
+            <h:outputText value="Id"/>
+        </f:facet>
+        <h:outputText value="#{p.id}"/>
+    </h:column>
+    <h:column>
+        <f:facet name="header">
+            <h:outputText value="Name"/>
+        </f:facet>
+        <h:form>
+            <h:commandLink action="detail">
+                <f:setPropertyActionListener value="#{p}" target="#{ph.currentProduct}"/>
+                <h:outputText value="#{p.name}"/>
+            </h:commandLink>
+        </h:form>
+    </h:column>
+    <h:column>
+        <f:facet name="header">
+            <h:outputText value="Price"/>
+        </f:facet>
+        <h:outputText value="#{p.price}"/>
+    </h:column>
+</h:dataTable>
+<h:form>
+    <h:commandLink action="login" value="Login"/>
+    <h:outputText value=" "/>
+    <h:commandLink value="Logout">
+        <f:actionListener type="shop.LogoutActionListener"/>
+    </h:commandLink>
+</h:form>
+</body>
+</html>

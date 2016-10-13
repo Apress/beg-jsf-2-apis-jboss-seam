@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.hibernate.eclipse.launch.ConsoleConfigurationLaunchConfigurationType">
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SeamShop"/>
+<stringAttribute key="org.hibernate.eclipse.launch.CONFIGURATION_FACTORY" value="JPA"/>
+<stringAttribute key="org.hibernate.eclipse.launch.PROPERTY_FILE" value="/SeamShop2/hibernate-console.properties"/>
+</launchConfiguration>
